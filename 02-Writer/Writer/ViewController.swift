@@ -28,9 +28,11 @@ class ViewController: UIViewController {
         if UserDefaults.standard.bool(forKey: "nightMode") == true {
             view.backgroundColor = UIColor.black
             textView.textColor = UIColor.white
+            UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         } else {
             view.backgroundColor = UIColor.white
             textView.textColor = UIColor.black
+            UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
         }
     }
 }
