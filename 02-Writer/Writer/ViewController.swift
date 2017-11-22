@@ -13,12 +13,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.becomeFirstResponder()
-        
-        print("Night Mode Setting is: \(UserDefaults.standard.bool(forKey: "nightMode"))")
+        NotificationCenter.default.addObserver(self, selector: #selector(detectIfSettingChanged), name: UserDefaults.didChangeNotification, object: nil)
     }
     
     // MARK: - Outlets
 
     @IBOutlet weak var textView: UITextView!
+    
+    // MARK: - Functions
+    
+    @objc func detectIfSettingChanged() {
+        print("Night Mode Setting is: \(UserDefaults.standard.bool(forKey: "nightMode"))")
+    }
 }
 
