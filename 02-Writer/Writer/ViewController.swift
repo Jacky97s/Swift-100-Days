@@ -23,7 +23,15 @@ class ViewController: UIViewController {
     // MARK: - Functions
     
     @objc func detectIfSettingChanged() {
-        print("Night Mode Setting is: \(UserDefaults.standard.bool(forKey: "nightMode"))")
+        //print("Night Mode Setting is: \(UserDefaults.standard.bool(forKey: "nightMode"))")
+        
+        if UserDefaults.standard.bool(forKey: "nightMode") == true {
+            view.backgroundColor = UIColor.black
+            textView.textColor = UIColor.white
+        } else {
+            view.backgroundColor = UIColor.white
+            textView.textColor = UIColor.black
+        }
     }
 }
 
