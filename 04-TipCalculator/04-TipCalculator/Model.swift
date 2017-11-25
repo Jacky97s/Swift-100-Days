@@ -15,6 +15,7 @@ class Model {
     // 2. calculate new values -> rest
     // 3. return as string for labels
     
+    // Logic
     // accept subtotal as string
     // accept tipPercent as Int
     
@@ -27,4 +28,40 @@ class Model {
     // convert subtotal to Currency
     // convert tipAmount to Cuttency
     // convert total to Currency
+    
+    var subtotalFromTextField = "0.00"
+    var tipPercentFromSlider = 15
+    
+    // Decimals for Calculation
+    var subtotalAsDecimal: NSDecimalNumber {
+        return NSDecimalNumber(string: subtotalFromTextField)
+    }
+    
+    var tipPercent: NSDecimalNumber {
+        return NSDecimalNumber(value: Double(tipPercentFromSlider)/100)
+    }
+    
+    // subtotal * tipPercent = totalAmount
+    var tipAmount: NSDecimalNumber {
+        return subtotalAsDecimal.multiplying(by: tipPercent)
+    }
+    
+    // subtotal + tipAmount = totalAmount
+    var totalAmount: NSDecimalNumber {
+        return subtotalAsDecimal.adding(tipAmount)
+    }
+    
+    // MARK: - Convert to Currency
+    let formatter = NumberFormatter()
+    
+    var subtotalAsCurrency: String {
+        formatter.numberStyle = .currency
+        return formatter.string(from: subtotalAsDecimal as NSNumber)!
+    }
+    
+    var tipAmountAsCurrency: String {
+        formatter.numberStyle = .currency
+        return formatter.string(from: tipAmount as NSNumber)!
+    }
+    
 }
