@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         subtotalTextfield.becomeFirstResponder()
         createToolbar()
+        tipPercentSlider.isEnabled = false
     }
     
     // MARK: - Outlets
@@ -27,6 +28,14 @@ class ViewController: UIViewController {
     // MARK: - Interactions
     @IBAction func dragSlider(_ sender: UISlider) {
         tipPercentLabel.text = "Tip (\(Int(sender.value))%)"
+        
+        model.tipPercentFromSlider = Int(sender.value)
+        
+        updateLabels()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        tipPercentSlider.isEnabled = false
     }
     
     // MARK: - Properties
@@ -59,18 +68,24 @@ class ViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         subtotalTextfield.resignFirstResponder()
+        tipPercentSlider.isEnabled = true
         
         if subtotalTextfield.text?.characters.count == 0 {
             subtotalTextfield.text = "$0.00"
+            model.subtotalFromTextField = "0.00"
+            updateLabels()
         } else {
             model.subtotalFromTextField = subtotalTextfield.text!
             model.tipPercentFromSlider = Int(tipPercentSlider.value)
             
-            // update labels
-            subtotalTextfield.text = model.subtotalAsCurrency
-            tipAmountLabel.text = model.tipAmountAsCurrency
-            totalAmountLabel.text = model.totalAmountAsCurrency
+            updateLabels()
         }
+    }
+    
+    func updateLabels() {
+        subtotalTextfield.text = model.subtotalAsCurrency
+        tipAmountLabel.text = model.tipAmountAsCurrency
+        totalAmountLabel.text = model.totalAmountAsCurrency
     }
 }
 
