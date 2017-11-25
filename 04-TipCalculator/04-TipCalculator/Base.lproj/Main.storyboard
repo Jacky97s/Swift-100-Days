@@ -61,8 +61,11 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="R5v-q9-Hrq">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="R5v-q9-Hrq">
                                         <rect key="frame" x="-2" y="191" width="379" height="31"/>
+                                        <connections>
+                                            <action selector="dragSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="upS-Km-7RS"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -77,6 +80,7 @@
                     </view>
                     <connections>
                         <outlet property="subtotalTextfield" destination="RLt-sL-B5q" id="858-6D-lY2"/>
+                        <outlet property="tipPercentLabel" destination="18U-Zt-pvu" id="r6p-dm-lrR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
