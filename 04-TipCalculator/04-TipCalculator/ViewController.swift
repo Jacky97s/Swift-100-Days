@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var subtotalTextfield: UITextField!
     @IBOutlet weak var tipPercentLabel: UILabel!
+    @IBOutlet weak var tipPercentSlider: UISlider!
+    @IBOutlet weak var tipAmountLabel: UILabel!
+    @IBOutlet weak var totalAmountLabel: UILabel!
     
     // MARK: - Interactions
     @IBAction func dragSlider(_ sender: UISlider) {
@@ -61,7 +64,12 @@ class ViewController: UIViewController {
             subtotalTextfield.text = "$0.00"
         } else {
             model.subtotalFromTextField = subtotalTextfield.text!
+            model.tipPercentFromSlider = Int(tipPercentSlider.value)
+            
+            // update labels
             subtotalTextfield.text = model.subtotalAsCurrency
+            tipAmountLabel.text = model.tipAmountAsCurrency
+            totalAmountLabel.text = model.totalAmountAsCurrency
         }
     }
 }

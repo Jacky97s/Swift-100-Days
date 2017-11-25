@@ -64,4 +64,9 @@ class Model {
         return formatter.string(from: tipAmount as NSNumber)!
     }
     
+    var totalAmountAsCurrency: String {
+        formatter.numberStyle = .currency
+        return formatter.string(from: totalAmount as NSNumber)!
+    }
+    
 }
