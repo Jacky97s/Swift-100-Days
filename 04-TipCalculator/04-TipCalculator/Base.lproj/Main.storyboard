@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TOM-tU-9GA">
                                 <rect key="frame" x="0.0" y="65" width="375" height="221"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RLt-sL-B5q">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RLt-sL-B5q">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="75"/>

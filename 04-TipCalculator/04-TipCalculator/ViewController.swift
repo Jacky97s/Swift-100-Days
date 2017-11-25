@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         tipPercentLabel.text = "Tip (\(Int(sender.value))%)"
     }
     
+    // MARK: - Properties
+    let model = Model()
+    
     // MARK: - Functions
     func createToolbar() {
         let toolbar = UIToolbar()
@@ -53,6 +56,13 @@ class ViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         subtotalTextfield.resignFirstResponder()
+        
+        if subtotalTextfield.text?.characters.count == 0 {
+            subtotalTextfield.text = "$0.00"
+        } else {
+            model.subtotalFromTextField = subtotalTextfield.text!
+            subtotalTextfield.text = model.subtotalAsCurrency
+        }
     }
 }
 
