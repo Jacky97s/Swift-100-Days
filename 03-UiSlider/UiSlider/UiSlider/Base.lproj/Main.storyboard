@@ -18,17 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="I8x-ZW-i78">
-                                <rect key="frame" x="12.5" y="261" width="350" height="145"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="I8x-ZW-i78">
+                                <rect key="frame" x="6.5" y="262" width="362" height="143"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjD-Ry-abP">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-5l-WIT">
-                                        <rect key="frame" x="-2" y="115" width="354" height="31"/>
+                                        <rect key="frame" x="-2" y="113" width="366" height="31"/>
+                                        <color key="minimumTrackTintColor" red="0.67640427023357863" green="0.53953538763821385" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.3313526095560978" green="0.18939273734067996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="dragSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="zh8-gu-AaZ"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
