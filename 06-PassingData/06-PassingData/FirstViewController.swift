@@ -9,17 +9,19 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        textView.becomeFirstResponder()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - Outlets
+    @IBOutlet weak var textView: UITextView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        sendMessage = textView.text
     }
-
-
+    
 }
 

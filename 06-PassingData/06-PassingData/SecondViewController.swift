@@ -8,11 +8,14 @@
 
 import UIKit
 
+var sendMessage: String?
+
 class SecondViewController: UIViewController {
 
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageLabel.text = sendMessage
     }
     
     // MARK: - Outlets
