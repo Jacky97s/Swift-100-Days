@@ -53,14 +53,27 @@
                     <view key="view" contentMode="scaleToFill" id="vcc-Bw-cP8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0H-Ra-ZXw">
+                                <rect key="frame" x="16" y="80" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Eyh-wg-vQW" firstAttribute="trailing" secondItem="n0H-Ra-ZXw" secondAttribute="trailing" constant="16" id="224-F5-M3H"/>
+                            <constraint firstItem="n0H-Ra-ZXw" firstAttribute="top" secondItem="Eyh-wg-vQW" secondAttribute="top" constant="16" id="PF1-hR-jgc"/>
+                            <constraint firstItem="n0H-Ra-ZXw" firstAttribute="leading" secondItem="Eyh-wg-vQW" secondAttribute="leading" constant="16" id="w2l-Ch-2v0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Eyh-wg-vQW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Second View" id="ByD-lO-Zj8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAT-MM-KtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="134"/>
+            <point key="canvasLocation" x="1213.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VYK-yB-YK6">
