@@ -13,7 +13,7 @@
         <!--First View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="_6_PassingData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="FirstViewController" customModule="_6_PassingData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
         <!--Second View-->
         <scene sceneID="lOW-hy-I1E">
             <objects>
-                <viewController id="wC1-VG-gES" sceneMemberID="viewController">
+                <viewController id="wC1-VG-gES" customClass="SecondViewController" customModule="_6_PassingData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vcc-Bw-cP8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,6 +70,9 @@
                         <viewLayoutGuide key="safeArea" id="Eyh-wg-vQW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Second View" id="ByD-lO-Zj8"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="n0H-Ra-ZXw" id="qJm-Io-DW1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAT-MM-KtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
