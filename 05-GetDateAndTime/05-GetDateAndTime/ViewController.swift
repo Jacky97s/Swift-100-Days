@@ -10,16 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        updateDateAndTime()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - Outlets
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    // MARK: - Intercations
+    @IBAction func tapRefreshButton(_ sender: UIButton) {
+        updateDateAndTime()
     }
-
-
+    
+    // MARK: - Properties
+    let dateFormatter = DateFormatter()
+    
+    // MARK: - Functions
+    
+    func updateDateAndTime() {
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .medium
+        
+        dateLabel.text = dateFormatter.string(from: Date())
+    }
 }
 
