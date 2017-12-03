@@ -18,11 +18,17 @@ class GroceriesTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add
             , target: self, action: nil)
         self.refreshControl = pullToRefreshControl
+        pullToRefreshControl.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
     }
     
     // MARK: - Properties
     var data = ["Milk", "Apples", "Ham", "Eggs"]
     let pullToRefreshControl = UIRefreshControl()
+    
+    // MARK: - Functions
+    @objc func refreshTable() {
+        pullToRefreshControl.endRefreshing()
+    }
 
     // MARK: - Table view data source
 
