@@ -28,8 +28,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fBN-ca-qmv">
-                                <rect key="frame" x="0.0" y="200" width="375" height="375"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBN-ca-qmv">
+                                <rect key="frame" x="0.0" y="202" width="375" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fBN-ca-qmv" secondAttribute="height" multiplier="1:1" id="ZN2-Uf-61w"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fBN-ca-qmv" secondAttribute="trailing" id="2Bs-VQ-Shh"/>
                             <constraint firstItem="fBN-ca-qmv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KI9-Os-m1T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z6R-bf-R6K" secondAttribute="trailing" constant="16" id="Vpw-JG-zaO"/>
-                            <constraint firstItem="fBN-ca-qmv" firstAttribute="top" secondItem="Z6R-bf-R6K" secondAttribute="bottom" id="Y2d-gZ-EtG"/>
+                            <constraint firstItem="fBN-ca-qmv" firstAttribute="top" secondItem="Z6R-bf-R6K" secondAttribute="bottom" constant="16" id="Y2d-gZ-EtG"/>
                             <constraint firstItem="Z6R-bf-R6K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ePj-sm-uKa"/>
                             <constraint firstItem="Z6R-bf-R6K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pgA-5e-5KX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fBN-ca-qmv" secondAttribute="trailing" id="uF0-hf-n2b"/>
@@ -50,8 +50,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Photo" id="0LP-Di-JS7">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="1dm-Kj-YHF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="1dm-Kj-YHF">
+                            <connections>
+                                <action selector="tapCameraButton:" destination="BYZ-38-t0r" id="uYR-b4-e7X"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="fBN-ca-qmv" id="MNJ-lI-7bK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
