@@ -23,10 +23,13 @@ class GroceriesTableViewController: UITableViewController {
     
     // MARK: - Properties
     var data = ["Milk", "Apples", "Ham", "Eggs"]
+    var cloudData = ["Pancakes", "Orange Juice", "Apples", "Milk", "Apples", "Ham", "Eggs"]
     let pullToRefreshControl = UIRefreshControl()
     
     // MARK: - Functions
     @objc func refreshTable() {
+        data = cloudData
+        self.tableView.reloadData()
         pullToRefreshControl.endRefreshing()
     }
 
