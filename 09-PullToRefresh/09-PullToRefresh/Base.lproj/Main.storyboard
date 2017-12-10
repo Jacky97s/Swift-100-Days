@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,10 +43,45 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Groceries" id="P83-Ef-bWc"/>
+                    <connections>
+                        <segue destination="atN-3R-LQW" kind="show" identifier="segueToNewGrocery" id="noJ-MK-tLX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txN-xX-ZIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="436" y="126.38680659670166"/>
+        </scene>
+        <!--New Grocery-->
+        <scene sceneID="1mr-ON-2EC">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="atN-3R-LQW" customClass="NewGroceryViewController" customModule="_9_PullToRefresh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pVo-8l-pae">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="cJ5-GL-Yef">
+                                <rect key="frame" x="16" y="80" width="343" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cJ5-GL-Yef" firstAttribute="top" secondItem="C6c-lN-qyY" secondAttribute="top" constant="16" id="Hxo-ao-QAh"/>
+                            <constraint firstItem="C6c-lN-qyY" firstAttribute="bottom" secondItem="cJ5-GL-Yef" secondAttribute="bottom" id="J6g-dN-raG"/>
+                            <constraint firstItem="C6c-lN-qyY" firstAttribute="trailing" secondItem="cJ5-GL-Yef" secondAttribute="trailing" constant="16" id="TDQ-g0-IC9"/>
+                            <constraint firstItem="cJ5-GL-Yef" firstAttribute="leading" secondItem="C6c-lN-qyY" secondAttribute="leading" constant="16" id="sAf-6V-NWZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C6c-lN-qyY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Grocery" id="UVu-KN-Kn6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="30G-i7-K0r"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ee1-FF-ZF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HgY-8L-8l3">
