@@ -21,10 +21,13 @@ class GroceriesTableViewController: UITableViewController {
         pullToRefreshControl.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     // MARK: - Properties
     let pullToRefreshControl = UIRefreshControl()
-    let model = Model()
-    
+
     // MARK: - Functions
     @objc func refreshTable() {
         model.data = model.cloudData

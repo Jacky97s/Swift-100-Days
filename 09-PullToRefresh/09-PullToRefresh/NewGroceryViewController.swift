@@ -21,6 +21,7 @@ class NewGroceryViewController: UIViewController {
     
     // MARK: - Interactions
     @IBAction func tapDoneButton(_ sender: UIBarButtonItem) {
-        self.navigationController?.popViewController(animated: true)
+        model.data.append(textView.text)
+        let _ = navigationController?.popViewController(animated: true)
     }
 }
