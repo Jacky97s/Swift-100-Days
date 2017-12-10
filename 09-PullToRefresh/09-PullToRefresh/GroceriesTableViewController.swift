@@ -16,20 +16,27 @@ class GroceriesTableViewController: UITableViewController {
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add
-            , target: self, action: nil)
+            , target: self, action: #selector(segueToNewGrocery))
         self.refreshControl = pullToRefreshControl
         pullToRefreshControl.addTarget(self, action: #selector(refreshTable), for: .valueChanged)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     // MARK: - Properties
     let pullToRefreshControl = UIRefreshControl()
-    let model = Model()
-    
+
     // MARK: - Functions
     @objc func refreshTable() {
         model.data = model.cloudData
         self.tableView.reloadData()
         pullToRefreshControl.endRefreshing()
+    }
+    
+    @objc func segueToNewGrocery() {
+        performSegue(withIdentifier: "segueToNewGrocery", sender: self)
     }
 
     // MARK: - Table view data source
