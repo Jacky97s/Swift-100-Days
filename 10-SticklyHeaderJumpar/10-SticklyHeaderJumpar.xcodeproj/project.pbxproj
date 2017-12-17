@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				04C6CCA81FE6D23D0019FD7D /* AppDelegate.swift */,
+				04C6CCBA1FE6D2D20019FD7D /* PlacesTableViewController.swift */,
 				04C6CCAC1FE6D23D0019FD7D /* Main.storyboard */,
 				04C6CCAF1FE6D23D0019FD7D /* Assets.xcassets */,
 				04C6CCB11FE6D23D0019FD7D /* LaunchScreen.storyboard */,
 				04C6CCB41FE6D23D0019FD7D /* Info.plist */,
-				04C6CCBA1FE6D2D20019FD7D /* PlacesTableViewController.swift */,
 			);
 			path = "10-SticklyHeaderJumpar";
 			sourceTree = "<group>";
