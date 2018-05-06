@@ -62,4 +62,7 @@ class PlacesTableViewController: UITableViewController {
             return letter
         }
     }
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return alphabetArray
+    }
 }
