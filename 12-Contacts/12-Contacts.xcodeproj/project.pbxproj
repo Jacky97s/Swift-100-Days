@@ -16,6 +16,7 @@
 		04AED75420D670740097EC10 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AED75320D670740097EC10 /* PersonTableViewCell.swift */; };
 		04AED75620D670F70097EC10 /* InfoCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AED75520D670F70097EC10 /* InfoCardTableViewController.swift */; };
 		04AED75820D673DF0097EC10 /* InfoCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AED75720D673DF0097EC10 /* InfoCardTableViewCell.swift */; };
+		04AED75A20D6747E0097EC10 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AED75920D6747E0097EC10 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		04AED75320D670740097EC10 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		04AED75520D670F70097EC10 /* InfoCardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardTableViewController.swift; sourceTree = "<group>"; };
 		04AED75720D673DF0097EC10 /* InfoCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardTableViewCell.swift; sourceTree = "<group>"; };
+		04AED75920D6747E0097EC10 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +69,12 @@
 				04AED74F20D670180097EC10 /* HeaderTableViewCell.swift */,
 				04AED75320D670740097EC10 /* PersonTableViewCell.swift */,
 				04AED75520D670F70097EC10 /* InfoCardTableViewController.swift */,
+				04AED75720D673DF0097EC10 /* InfoCardTableViewCell.swift */,
 				04AED73F20D66AF10097EC10 /* Main.storyboard */,
 				04AED74220D66AF30097EC10 /* Assets.xcassets */,
 				04AED74420D66AF30097EC10 /* LaunchScreen.storyboard */,
 				04AED74720D66AF30097EC10 /* Info.plist */,
-				04AED75720D673DF0097EC10 /* InfoCardTableViewCell.swift */,
+				04AED75920D6747E0097EC10 /* Model.swift */,
 			);
 			path = "12-Contacts";
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AED75A20D6747E0097EC10 /* Model.swift in Sources */,
 				04AED74E20D66BB40097EC10 /* ContactsTableViewController.swift in Sources */,
 				04AED75820D673DF0097EC10 /* InfoCardTableViewCell.swift in Sources */,
 				04AED75020D670180097EC10 /* HeaderTableViewCell.swift in Sources */,
