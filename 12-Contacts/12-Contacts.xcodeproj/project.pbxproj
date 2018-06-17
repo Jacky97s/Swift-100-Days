@@ -70,11 +70,11 @@
 				04AED75320D670740097EC10 /* PersonTableViewCell.swift */,
 				04AED75520D670F70097EC10 /* InfoCardTableViewController.swift */,
 				04AED75720D673DF0097EC10 /* InfoCardTableViewCell.swift */,
+				04AED75920D6747E0097EC10 /* Model.swift */,
 				04AED73F20D66AF10097EC10 /* Main.storyboard */,
 				04AED74220D66AF30097EC10 /* Assets.xcassets */,
 				04AED74420D66AF30097EC10 /* LaunchScreen.storyboard */,
 				04AED74720D66AF30097EC10 /* Info.plist */,
-				04AED75920D6747E0097EC10 /* Model.swift */,
 			);
 			path = "12-Contacts";
 			sourceTree = "<group>";

@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="headerCell" id="BnJ-Td-2xQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="headerCell" id="BnJ-Td-2xQ" customClass="HeaderTableViewCell" customModule="_2_Contacts" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BnJ-Td-2xQ" id="nSr-hT-bxj" customClass="HeaderTableViewCell" customModule="_2_Contacts" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BnJ-Td-2xQ" id="nSr-hT-bxj">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -40,6 +40,9 @@
                                         <constraint firstItem="G4R-ns-wDx" firstAttribute="leading" secondItem="nSr-hT-bxj" secondAttribute="leadingMargin" constant="10" id="awc-CY-Yo3"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="headerLabel" destination="G4R-ns-wDx" id="GHg-QN-Ey9"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="3xP-1D-K6B" customClass="PersonTableViewCell" customModule="_2_Contacts" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="84" width="375" height="56"/>
@@ -84,6 +87,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="nameLabel" destination="olN-62-cf4" id="5T2-Gd-yvb"/>
+                                    <outlet property="profileImageView" destination="70K-Ce-GFX" id="INe-r2-NLz"/>
                                     <segue destination="0XV-Ie-HjQ" kind="show" id="RRi-Uz-7hO"/>
                                 </connections>
                             </tableViewCell>
@@ -211,6 +216,13 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="Jbg-d6-9TS" secondAttribute="trailing" constant="8" id="yUG-OD-aKK"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="emailLabel" destination="zn2-az-tHT" id="a6h-3O-TAm"/>
+                                    <outlet property="nameLabel" destination="nFy-5D-yyj" id="y4Z-zi-kbJ"/>
+                                    <outlet property="notesLabel" destination="74V-ff-5oC" id="Kl6-mw-4Fi"/>
+                                    <outlet property="numberLabel" destination="jer-OI-aHQ" id="YPm-bc-lUE"/>
+                                    <outlet property="profileImageView" destination="3L1-Xo-jtL" id="G2J-RK-vY6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
