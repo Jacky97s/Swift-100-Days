@@ -47,6 +47,24 @@ class ContactsTableViewController: UITableViewController {
         }
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! HeaderTableViewCell
+        switch section {
+        case 0:
+            cell.headerLabel.text = "RECENT"
+        case 1:
+            cell.headerLabel.text = "FRIENDS"
+        default:
+            break
+        }
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
 
     /*
     // MARK: - Navigation

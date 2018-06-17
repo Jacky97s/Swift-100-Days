@@ -13,6 +13,9 @@ class PersonTableViewCell: UITableViewCell {
     // MARK: - When Cell Loads
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.layoutIfNeeded()
+        profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
+        profileImageView.layer.masksToBounds = true
     }
 
     // MARK: - Outlets
